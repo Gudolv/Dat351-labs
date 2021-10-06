@@ -44,6 +44,9 @@ arcproxy
 
 to create a proxy certificate, giving us access to do our tasks on the ARC network. 
 
+![Arc proxy](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig2/arcproxy.png)
+
+
 ### Task 1
 
 The first task was to submit a job to the ARC-grid, the job was basically to write at script telling the grid to use 
@@ -78,6 +81,7 @@ arcget --dir=result helloworld
 
 The output of this particular task is, no suprise, "Hello World" 
 
+![Task1](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig2/arcget.png)
 
 ### Task 2
 
@@ -95,16 +99,18 @@ terminal of **eple.hib.no**. Typing:
 ldapsearch -H "ldap://arcce.dat351:2135" -b "Mds-Vo-Name=local,o=grid" -x
 
 ```
+![]()
+
 and scanning through the output we tried finding the answer to these questions. 
 
 First up was trying to find information on finished jobs: 
 
 
 Second was to find how many CPUs each worker node had: 
-
+![Workernode](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig2/workernode.png)
 It appears that they have 2 CPUs. 
 
-
+![Batch](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig2/batchcpu.png)
 Thirdly was to find what batch system the cluster was running: 
 
 
@@ -123,17 +129,11 @@ The queue batch has 1 CPU and runs CentOS-8.4.2015
 To specify the computing element, type of information endpoint and submission endpoint you would run the command:
 
 ```
-arcsub --submission-endpoint-type=org.nordugrid,arcrest --info-endpoint-type=org.nordugrid.arcrest / 
---computing-element=https://arcce.dat351/arex test1.xrls
+aarcsub --submission-endpoint-type=org.nordugrid.arcrest --info-endpoint-type=arcrest --computing-element=https://arcce.dat351/arex test1.xrsl
 
 ```
+[Task3](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig2/task3done.png)
 
-but I couldn't get this to run, getting an error. By running the below command, however, it ran just fine but I'm not 
-sure if this is correct:
-
-```
-arcsub --computing-element=https://arcce.dat351/arex test1.xrls --submission-endpoint-type=arcrest --info-endpoint-type=arcrest 
-```
 
 ### Task 4
 
@@ -144,7 +144,7 @@ center that supports those enpoints. Below is our attempt at doing this:
 ```
 arcsub --info-endpoint-type=arcrest --submission-endpoint-type=arcrest --registry=dat351 test1.xrls
 ```
-
+![Task4](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig2/task4.png)
 
 ### Task 5
 
@@ -181,7 +181,9 @@ looked like this:
 ```
 
 Saving this as **my_echo_job.xrls** and submiting the job with **arcsub my_echo_job.xrls**. After it had run its course, we 
-retrived it with **arcget --dir=echoResult my_eco** and it's out put was as expected (my echo).
+retrived it with **arcsub --info-endpoint-type=arcrest --submission-endpoint-type=arcrest --registry=dat351 test1.xrls** and it's out put was as expected (my echo).
+
+![Task5](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig2/task5.png)
 
 ### Task 6 - Staging 
 
@@ -211,6 +213,8 @@ arcsub --registry=dat351 --info-endpoint-type=arcrest staging1.xrls
 
 This, after some initial trouble, worked fine and with the **arcget** command we were able to retrive the compiled 
 program. 
+
+![Task6](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig2/task6.png)
 
 # AliEn 
 
@@ -274,6 +278,7 @@ Validationcommand  = "bin/validate.sh";
 Output = { "stdout,stderr" };
 OutputDir = "prime";
 ```
+![Task7](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig2/task7.png)
 
 ### Task 8
 
@@ -289,6 +294,8 @@ had to edit the job description file through the **aliensh** shell. To do this w
 ```
 edit testprime.sh
 ```
-
+![Task8](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig2/task8changed.png)
 Then we change the **Arguments** variable from 65566 to 65566548. Next we have to delete the output (or change the file name) 
 to allow new results to be written. This seemed to work just fine and we got the new output stored in the prime folder. 
+
+![Both outputs](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig2/2outputs.png)
