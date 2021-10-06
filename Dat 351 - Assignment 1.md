@@ -46,6 +46,8 @@ created on does not matter. In linux this can be done with ``touch .rhost``.
 In the assignment it says only to add the **TORQUE** computers but we only managed 
 to get this to work by adding all the computers. 
 
+![Example of .hosts](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig1/hosts.png)
+
 After the **.rhost** whas created and contained the necessary text we ran 
 ``rcp /tmp/afile.txt torquew1:/tmp ``. This copied the file from the current node
 to the target **torquew1**. 
@@ -83,6 +85,8 @@ srun myfirstjob.sh
 ```
 %x is standin for the job-name and %j is standin for the job id. This resulted 
 in the creation of two files, MyFirstJob498.out and MyFirstJob498.err. 
+
+![Slurm](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig1/slurmsuc.png)
 
 Next up was testing the **scancel** command. This is used to cancel jobs and only
 works for your personal jobs. 
