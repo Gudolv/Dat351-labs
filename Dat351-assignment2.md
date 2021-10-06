@@ -131,7 +131,7 @@ To specify the computing element, type of information endpoint and submission en
 aarcsub --submission-endpoint-type=org.nordugrid.arcrest --info-endpoint-type=arcrest --computing-element=https://arcce.dat351/arex test1.xrsl
 
 ```
-[Task3](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig2/task3done.png)
+![Task3](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig2/task3done.png)
 
 
 ### Task 4
