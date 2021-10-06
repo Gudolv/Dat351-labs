@@ -295,7 +295,7 @@ had to edit the job description file through the **aliensh** shell. To do this w
 edit testprime.sh
 ```
 ![Task8](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig2/task8changed.png)
-Then we change the **Arguments** variable from 65566 to 65566548. Next we have to delete the output (or change the file name) 
-to allow new results to be written. This seemed to work just fine and we got the new output stored in the prime folder. 
+
+Then we change the **Arguments** variable from 65566 to 65566548. Next we have to delete the output (or change the file name) to allow new results to be written. This seemed to work just fine and we got the new output stored in the prime folder. 
 
 ![Both outputs](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig2/2outputs.png)
