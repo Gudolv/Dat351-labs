@@ -99,7 +99,6 @@ terminal of **eple.hib.no**. Typing:
 ldapsearch -H "ldap://arcce.dat351:2135" -b "Mds-Vo-Name=local,o=grid" -x
 
 ```
-![]()
 
 and scanning through the output we tried finding the answer to these questions. 
 
