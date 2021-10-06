@@ -67,8 +67,8 @@ like this:
 
 #!/bin/bash
 
-sleep 62
-time
+sleep 60
+data
 ```
 ![First slurm](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig1/slurmsuc.png)
 
@@ -89,16 +89,20 @@ srun myfirstjob.sh
 %x is standin for the job-name and %j is standin for the job id. This resulted 
 in the creation of two files, MyFirstJob505.out and MyFirstJob505.err. 
 
-![Slurm](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig1/slurmsuc.png)
+![Slurm](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig1/myfirstjob.png)
 
 Next up was testing the **scancel** command. This is used to cancel jobs and only
 works for your personal jobs. 
+
+![Cancel](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig1/cancelslurm.png)
 
 The next step in the assignment was to compile a small C-program and submitt a 
 job to run the program. We used the code provided in the assignment, compiled it
 with **cc**. called it **pi** and tested it localy with **./pi**. Then we proceded
 to follow the same procedure mentioned above, creating a small batch script to 
 run the program, the output was:
+
+![PI](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig1/pijobsuc.png)
 
 1**# of trials= 100000000 , estimate of pi is 4**
 
@@ -119,10 +123,14 @@ Error = pi_HTC.error
 
 Queue 
 ```
+![Condor](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig1/condorjobproc.png)
+
 We chose vanilla as universe as this is the recommended environment for running
 compiled languages. It was submitted using **condor_submit condor_job**, this 
 succeded and we got the same output as with HTCondor. You can check the queue 
 with **condor_q**.
+
+![Result](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig1/pihtcout.png)
 
 ## TORQUE
 
@@ -140,6 +148,8 @@ cd $HOME/
 
 ./pi 
 ```
+![Torque](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig1/torquesuc.png)
+
 One can check the status of the job using **qstat**, running the script gave the 
 same output as the two other attempts at running the pi-program. 
 
