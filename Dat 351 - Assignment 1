@@ -93,7 +93,7 @@ with **cc**. called it **pi** and tested it localy with **./pi**. Then we proced
 to follow the same procedure mentioned above, creating a small batch script to 
 run the program, the output was:
 
-**# of trials= 100000000 , estimate of pi is 4**
+1**# of trials= 100000000 , estimate of pi is 4**
 
 ## HTCondor
 
@@ -133,7 +133,7 @@ cd $HOME/
 
 ./pi 
 ```
-One can check the status of the job using **showq**, running the script gave the 
+One can check the status of the job using **qstat**, running the script gave the 
 same output as the two other attempts at running the pi-program. 
 
 ## Running with and without #!bin/bash 
@@ -141,8 +141,6 @@ same output as the two other attempts at running the pi-program.
 Running the script **torque_job_nob.sh** thats exactly the same as the one above 
 without the #!/bin/bash runs just fine on **TORQUE** but running the same script
 that worked fine with **Slurm** earlier after removing **#!/bin/bash** gets an error. 
-
-
 
 I assume that the difference lies in the way that jobs are submitted, for **Slurm** 
 you submitt a script that creates a fork, then executes the job while in **TORQUE** 
