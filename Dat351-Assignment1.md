@@ -54,7 +54,7 @@ to the target **torquew1**.
 
 ![Files moved](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig1/movefilesux.png)
 
-##Slurm 
+## Slurm 
 
 Next it was time to try out Slurm. Jobs has to be submitted from a computer 
 called **slurmmaster**. To submitt a job to Slurm you need to use the ``sbatch``
