@@ -52,6 +52,8 @@ After the **.rhost** whas created and contained the necessary text we ran
 ``rcp /tmp/afile.txt torquew1:/tmp ``. This copied the file from the current node
 to the target **torquew1**. 
 
+![Files moved](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig1/movefilesux.png)
+
 ##Slurm 
 
 Next it was time to try out Slurm. Jobs has to be submitted from a computer 
@@ -68,6 +70,7 @@ like this:
 sleep 62
 time
 ```
+![First slurm](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig1/slurmsuc.png)
 
 This was run with the batch scrip runmyfirstjob.sh, after making it executable 
 with chmod u+x myfirstjob, and looked like this:
@@ -84,7 +87,7 @@ srun myfirstjob.sh
 
 ```
 %x is standin for the job-name and %j is standin for the job id. This resulted 
-in the creation of two files, MyFirstJob498.out and MyFirstJob498.err. 
+in the creation of two files, MyFirstJob505.out and MyFirstJob505.err. 
 
 ![Slurm](https://github.com/Gudolv/Dat351-labs/blob/main/Screenshots/Oblig1/slurmsuc.png)
 
